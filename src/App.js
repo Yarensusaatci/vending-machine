@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import VendingMachine from "./components/machine/VendingMachine";
+import SystemDashboard from "./components/dashboard/System";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import allReducers from "./redux/reducers";
+import Popup from "./components/Popup";
+
+const store = createStore(allReducers);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="main-layout flex">
+        <SystemDashboard />
+        <Popup />
+        <VendingMachine />
+      </div>
+    </Provider>
   );
 }
 

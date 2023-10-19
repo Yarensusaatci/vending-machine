@@ -1,13 +1,248 @@
+/* Temel Stil Düzeni */
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: "Arial", sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rounded {
+    border-radius: 8px;
+}
+
+
+/* Vending Machine Stilleri */
+
+.vending-machine {
+    padding: 20px;
+    width: 80%;
+}
+
+.vending-machine h1 {
+    padding: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    height: max-content;
+}
+
+.vending-machine h2 {
+    color: #C62828;
+}
+
+.btn-negative {
+    background-color: #E65100;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.product {
+    border: 2px solid #ddd;
+    margin-bottom: 20px;
+    background-color: #ECEFF1;
+    padding: 10px;
+    align-items: center;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.product img {
+    width: 150px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.btn-select {
+    background-color: #E65100;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.robot-arm-spinner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 240px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner-label {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.cancel-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.cancel-button:hover {
+    background-color: #c0392b;
+}
+
+.money-insert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coin {
+    background-color: green;
+    width: 70px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.coin:hover {
+    background-color: greenyellow;
+}
+
+
+/* Sistem Kontrol Paneli Stilleri */
+
+.system-dashboard {
+    width: 300px;
+    height: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.component {
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #e6e6e6;
+}
+
+
+/* Giriş Formu Stilleri */
+
+.login-container {
+    width: 900px;
+    height: 600px;
+    padding: 20px;
+    background-color: palegoldenrod;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-container button {
+    width: 80%;
+    padding: 10px;
+    margin-top: 100px;
+    background-color: palevioletred;
+    border-radius: 50px;
+    font-size: large;
+    font-weight: 300;
+    margin-left: 90px;
+}
+
+.login-container button:hover {
+    background-color: pink;
+}
+
+.login-container div {
+    width: 200%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 340px;
+    color: purple;
+    font-weight: 800;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+}
+
+
+/* Diğer Özel Stiller */
+
+.main-layout {
+    background-color: #BBDEFB;
+}
+
+.custom-button {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.session-expire {
+    text-align: center;
+    background-color: #C62828;
+    color: #fff;
+    padding: 10px;
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    height: 100px;
+    margin-top: 75px;
+}
+
+.countdown {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.countdown-number {
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.supplier-dashboard button {
+    background-color: palevioletred;
+    width: 100px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 6px;
+    display: block;
 }
